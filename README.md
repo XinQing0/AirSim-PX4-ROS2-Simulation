@@ -1,15 +1,28 @@
 # ROS2+PX4+AirSim 仿真环境搭建与使用教程
 
+## 资源包说明
+
+本教程所需的所有资源已打包为「AirSim相关资源包」，包含以下内容：
+- AirSim（已打包为exe文件）
+- PX4
+- DDS-Agent
+- ROS2
+
+**下载链接**：
+- 夸克网盘：`https://pan.quark.cn/s/421688f767a3`
+- 提取码：无需提取码，打开夸克APP即可获取
+
 ## 目录
 
 1. [环境准备](#环境准备)
 2. [PX4 安装与配置](#px4-安装与配置)
-3. [AirSim 安装与配置](#airsim-安装与配置)
-4. [ROS2 安装与配置](#ros2-安装与配置)
-5. [系统启动与运行](#系统启动与运行)
-6. [无人机控制方法](#无人机控制方法)
-7. [通信验证](#通信验证)
-8. [常见问题与解决方案](#常见问题与解决方案)
+3. [DDS-Agent安装](#dds-agent安装)
+4. [ROS2安装](#ros2安装)
+5. [AirSim 安装与配置](#airsim-安装与配置)
+6. [系统启动与运行](#系统启动与运行)
+7. [无人机控制方法](#无人机控制方法)
+8. [通信验证](#通信验证)
+9. [常见问题与解决方案](#常见问题与解决方案)
 
 ## 环境准备
 
@@ -111,8 +124,8 @@ MicroXRCEAgent --help
 ### 1. 安装步骤
 
 ```bash
-# 将hw-ros2.zip拷贝到/home/hw目录
-cp /path/to/hw-ros2.zip /home/hw/
+# 从「AirSim相关资源包」中复制ROS2安装包到/home/hw目录
+cp /path/to/AirSim相关资源包/hw-ros2.zip /home/hw/
 
 # 解压缩
 unzip hw-ros2.zip
@@ -121,8 +134,8 @@ unzip hw-ros2.zip
 cd hw-ros2/setup
 ./setup.sh
 
-# 拷贝我自己的ros2文件到工作空间（覆盖ros文件夹）
-cp -r /path/to/your/ros2/* /home/hw/hw-ros2/ros2/
+# 拷贝自己的ros2文件到工作空间（覆盖ros文件夹）
+cp -r /path/to/AirSim相关资源包/ros2/* /home/hw/hw-ros2/ros2/
 
 # 构建ROS2工作空间
 cd /home/hw/hw-ros2/ros2
@@ -142,9 +155,12 @@ pip install "numpy<2.0" "opencv-python<4.10"
 
 ### 2. 配置AirSim
 
-1. 下载并解压AirSim（已打包为exe文件，直接运行即可）
-2. 将`settings.json`拷贝到AirSim的配置目录
-3. 运行`AirSim.exe`
+1. **下载AirSim资源包**：从夸克网盘下载「AirSim相关资源包」
+   - 链接：`https://pan.quark.cn/s/421688f767a3`
+   - 提取码：无需提取码，打开夸克APP即可获取
+2. 解压下载的资源包
+3. 将`settings.json`拷贝到AirSim的配置目录
+4. 运行`AirSim.exe`
 
 ## 系统启动与运行
 
