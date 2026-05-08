@@ -168,6 +168,8 @@ pip install "numpy<2.0" "opencv-python<4.10"
 
 1. **启动AirSim**：在Windows中运行`AirSim.exe`
    <img width="933" height="380" alt="image" src="https://github.com/user-attachments/assets/2996881a-f37b-4d79-9610-a5d13026f60a" />
+   打开后即可看见画面
+   <img width="1660" height="934" alt="image" src="https://github.com/user-attachments/assets/3c98b7be-461c-411c-a46c-b93c1fdf0f37" />
 
 3. **启动PX4**：在WSL窗口中执行
    ```bash
@@ -191,13 +193,19 @@ pip install "numpy<2.0" "opencv-python<4.10"
    ros2 launch hw_insight track.launch.py
    ```
    出现connected，以及initialized即代表成功
-   
+   <img width="1060" height="136" alt="image" src="https://github.com/user-attachments/assets/76ebf512-f52d-4f2d-867c-1d1d8f25ecbe" />
+   可以再RVIZ里面看见无人机拍摄到的画面
+   <img width="677" height="646" alt="image" src="https://github.com/user-attachments/assets/8f8575f9-0fd2-4480-b2d3-cee436c28e0c" />
+
+
 8. **启动键盘控制**：在另一个WSL窗口中执行
    ```bash
    cd /home/hw/hw-ros2/ros2
    source install/local_setup.sh
    ros2 run hw_insight keyboard_velocity
    ```
+   <img width="659" height="537" alt="image" src="https://github.com/user-attachments/assets/b7b4ac03-7fdc-4e7a-90b8-3825ab183137" />
+
 
 ### 2. 验证启动状态
 
