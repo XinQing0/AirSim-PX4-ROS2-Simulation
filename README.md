@@ -167,24 +167,32 @@ pip install "numpy<2.0" "opencv-python<4.10"
 ### 1. 启动顺序
 
 1. **启动AirSim**：在Windows中运行`AirSim.exe`
-     <img width="933" height="380" alt="image" src="https://github.com/user-attachments/assets/2996881a-f37b-4d79-9610-a5d13026f60a" />
+   <img width="933" height="380" alt="image" src="https://github.com/user-attachments/assets/2996881a-f37b-4d79-9610-a5d13026f60a" />
 
 3. **启动PX4**：在WSL窗口中执行
    ```bash
    cd /home/hw/px4v1.15.2
    make px4_sitl_default none_iris
    ```
-4. **启动DDS Agent**：在另一个WSL窗口中执行
+   <img width="831" height="444" alt="image" src="https://github.com/user-attachments/assets/a910b58a-5778-4335-ac47-3e7ae0d80f18" />
+   显示ready takeoff表示连接成功
+   <img width="641" height="194" alt="image" src="https://github.com/user-attachments/assets/0f9cbb3d-d2c6-42d8-a2f4-af272fbdfc6f" />
+
+5. **启动DDS Agent**：在另一个WSL窗口中执行
    ```bash
    MicroXRCEAgent udp4 -p 8888
    ```
-5. **启动ROS2节点**：在另一个WSL窗口中执行
+   <img width="1096" height="281" alt="image" src="https://github.com/user-attachments/assets/56124485-7dab-4ebc-af8a-b344ede87205" />
+
+6. **启动ROS2节点**：在另一个WSL窗口中执行
    ```bash
    cd /home/hw/hw-ros2/ros2
    source install/local_setup.sh
    ros2 launch hw_insight track.launch.py
    ```
-6. **启动键盘控制**：在另一个WSL窗口中执行
+   出现connected，以及initialized即代表成功
+   
+8. **启动键盘控制**：在另一个WSL窗口中执行
    ```bash
    cd /home/hw/hw-ros2/ros2
    source install/local_setup.sh
